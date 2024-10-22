@@ -1,7 +1,5 @@
 function errorHandler(error, req, res, next) {
-  if (error.name === "InvalidPrice") {
-    return res.status(400).json({ message: "Price cannot be below 15000" });
-  } else if (
+  if (
     error.name === "SequelizeValidationError" ||
     error.name === "SequelizeUniqueConstraintError" ||
     error.name === "FileRequired" ||
